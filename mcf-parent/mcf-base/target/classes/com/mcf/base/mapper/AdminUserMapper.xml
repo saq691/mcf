@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mcf.base.mapper.AdminUserMapper" >
+  <resultMap id="BaseResultMap" type="com.mcf.base.pojo.AdminUser" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="is_delete" property="isDelete" jdbcType="TINYINT" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="enabled" property="enabled" jdbcType="TINYINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, is_delete, username, password, enabled, create_time, update_time
+  </sql>
+  
+  <select id="get" resultMap="BaseResultMap" parameterType="com.mcf.base.pojo.AdminUser">
+    select 
+    <include refid="Base_Column_List" />
+    from t_admin_user where id = #{id,jdbcType=VARCHAR} limit 1
+  </select>
+  
+  <select id="getById" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_admin_user admin_user where admin_user.is_delete= 0 and admin_user.id = #{0} limit 1
+  </select>
+  
+  <!-- 根据用户名获得唯一对象 -->
+  <select id="getByUsername" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_admin_user admin_user where admin_user.is_delete= 0 and admin_user.username = #{0} limit 1
+  </select>
+  
+  <!-- 获取所有系统用户列表 -->
+  <select id="getUserList" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_admin_user admin_user 
+    <where>
+        is_delete= 0 
+	    <if test="keywords != null">
+	      and admin_user.username like concat('%',#{keywords,jdbcType=VARCHAR},'%') 
+	    </if>
+    </where>
+    order by create_time desc 
+  </select>
+  
+  <delete id="delete" parameterType="com.mcf.base.pojo.AdminUser">
+    delete from t_admin_user
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <delete id="batchDelete" parameterType="java.lang.String">
+	delete from t_admin_user where id in 
+	<foreach collection="array" item="id" open="(" separator="," close=")">
+	  #{id}
+	</foreach>
+  </delete>
+  
+  <insert id="add" parameterType="com.mcf.base.pojo.AdminUser">
+    insert into t_admin_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="enabled != null" >
+        enabled,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null" >
+        #{enabled,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="update" parameterType="com.mcf.base.pojo.AdminUser">
+    update t_admin_user 
+    <set >
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null" >
+        enabled = #{enabled,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+      
+</mapper>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mcf.base.mapper.CopartnerMapper" >
+  <resultMap id="BaseResultMap" type="com.mcf.base.pojo.Copartner" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="is_delete" property="isDelete" jdbcType="TINYINT" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="city_id" property="cityId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="contact_way" property="contactWay" jdbcType="VARCHAR" />
+    <result column="main_business" property="mainBusiness" jdbcType="VARCHAR" />
+    <result column="company_scale" property="companyScale" jdbcType="TINYINT" />
+    <result column="cooperate_type" property="cooperateType" jdbcType="TINYINT" />
+    <result column="is_contact" property="isContact" jdbcType="TINYINT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="visit_time" property="visitTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, is_delete, city_name, city_id, name, contact_way, main_business, company_scale, 
+    cooperate_type, is_contact, remark, create_time, visit_time
+  </sql>
+  
+  <select id="get" resultMap="BaseResultMap" parameterType="com.mcf.base.pojo.Copartner" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_copartner
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="getById" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_copartner
+    where is_delete = 0 and id = #{0} limit 1
+  </select>
+  
+  <!-- 获取所有联系信息列表 -->
+  <select id="getCopartnerList" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select 
+    <include refid="Base_Column_List" />
+    from t_copartner copartner 
+    <where>
+        is_delete= 0 
+	    <if test="keywords != null">
+	      and copartner.name like concat('%',#{keywords,jdbcType=VARCHAR},'%') 
+	      or copartner.contact_way like concat('%',#{keywords,jdbcType=VARCHAR},'%') 
+	    </if>
+    </where>
+    order by create_time desc
+  </select>
+  
+  <delete id="delete" parameterType="com.mcf.base.pojo.Copartner" >
+    delete from t_copartner 
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <delete id="batchDelete" parameterType="java.lang.String">
+	delete from t_copartner where id in 
+	<foreach collection="array" item="id" open="(" separator="," close=")">
+	  #{id}
+	</foreach>
+  </delete>
+  
+  <insert id="add" parameterType="com.mcf.base.pojo.Copartner" >
+    insert into t_copartner
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="cityName != null" >
+        city_name,
+      </if>
+      <if test="cityId != null" >
+        city_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="contactWay != null" >
+        contact_way,
+      </if>
+      <if test="mainBusiness != null" >
+        main_business,
+      </if>
+      <if test="companyScale != null" >
+        company_scale,
+      </if>
+      <if test="cooperateType != null" >
+        cooperate_type,
+      </if>
+      <if test="isContact != null" >
+        is_contact,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="visitTime != null" >
+        visit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="cityName != null" >
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="contactWay != null" >
+        #{contactWay,jdbcType=VARCHAR},
+      </if>
+      <if test="mainBusiness != null" >
+        #{mainBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="companyScale != null" >
+        #{companyScale,jdbcType=TINYINT},
+      </if>
+      <if test="cooperateType != null" >
+        #{cooperateType,jdbcType=TINYINT},
+      </if>
+      <if test="isContact != null" >
+        #{isContact,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="visitTime != null" >
+        #{visitTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="update" parameterType="com.mcf.base.pojo.Copartner" >
+    update t_copartner
+    <set >
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="cityName != null" >
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        city_id = #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="contactWay != null" >
+        contact_way = #{contactWay,jdbcType=VARCHAR},
+      </if>
+      <if test="mainBusiness != null" >
+        main_business = #{mainBusiness,jdbcType=VARCHAR},
+      </if>
+      <if test="companyScale != null" >
+        company_scale = #{companyScale,jdbcType=TINYINT},
+      </if>
+      <if test="cooperateType != null" >
+        cooperate_type = #{cooperateType,jdbcType=TINYINT},
+      </if>
+      <if test="isContact != null" >
+        is_contact = #{isContact,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="visitTime != null" >
+        visit_time = #{visitTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

@@ -1,0 +1,11 @@
+require.config({
+	baseUrl:'js',
+	paths:{
+		jquery:'lib/jquery'
+	}
+});
+define(['jquery'],function($){
+	$('#showMenu').click(function(){
+		$('#navMenu').toggle();
+	});
+});

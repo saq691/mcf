@@ -1,0 +1,10 @@
+com\mcf\service\IAddressService.class
+com\mcf\service\impl\CopartnerServiceImpl.class
+com\mcf\service\impl\AddressServiceImpl.class
+com\mcf\service\ICopartnerService.class
+com\mcf\service\impl\AdminUserServiceImpl.class
+com\mcf\service\INewsContentService.class
+com\mcf\service\impl\ContactInfoServiceImpl.class
+com\mcf\service\IContactInfoService.class
+com\mcf\service\impl\NewsContentServiceImpl.class
+com\mcf\service\IAdminUserService.class

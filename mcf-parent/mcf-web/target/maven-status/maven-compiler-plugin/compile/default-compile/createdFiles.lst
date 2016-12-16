@@ -1,0 +1,5 @@
+com\mcf\web\controller\AddressController.class
+com\mcf\web\listener\SystemInitListener.class
+com\mcf\web\controller\CopartnerController.class
+com\mcf\web\controller\ContactInfoController.class
+com\mcf\web\controller\NewsController.class

@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mcf</groupId>
+		<artifactId>mcf-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+    <groupId>com.mcf.service</groupId>
+    <artifactId>mcf-service</artifactId>
+	<version>${mcf-service.version}</version>
+	<packaging>jar</packaging>
+
+	<name>mcf-service</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<finalName>mcf-service</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.mcf.base</groupId>
+			<artifactId>mcf-base</artifactId>
+			<version>${mcf-base.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

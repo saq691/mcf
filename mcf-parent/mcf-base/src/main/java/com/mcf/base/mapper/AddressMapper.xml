@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mcf.base.mapper.AddressMapper" >
+  <resultMap id="BaseResultMap" type="com.mcf.base.pojo.Address" >
+    <id column="address_pid" property="id" jdbcType="INTEGER" />
+    <result column="address_name" property="name" jdbcType="VARCHAR" />
+    <result column="address_parent_id" property="parentId" jdbcType="INTEGER" />
+    <result column="address_short_name" property="shortName" jdbcType="VARCHAR" />
+    <result column="address_level_type" property="levelType" jdbcType="TINYINT" />
+    <result column="address_city_code" property="cityCode" jdbcType="INTEGER" />
+    <result column="address_zip_code" property="zipCode" jdbcType="INTEGER" />
+    <result column="address_merger_name" property="mergerName" jdbcType="VARCHAR" />
+    <result column="address_lng" property="lng" jdbcType="DOUBLE" />
+    <result column="address_lat" property="lat" jdbcType="DOUBLE" />
+    <result column="address_pinyin" property="pinyin" jdbcType="VARCHAR" />
+    <result column="address_hot_city" property="hotCity" jdbcType="TINYINT" />
+    <result column="address_sort_flag" property="sortFlag" jdbcType="INTEGER" />
+    <result column="address_is_flag" property="isFlag" jdbcType="TINYINT" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    address.id address_pid, 
+    address.name address_name, 
+    address.parent_id address_parent_id, 
+    address.short_name address_short_name, 
+    address.level_type address_level_type, 
+    address.city_code address_city_code, 
+    address.zip_code address_zip_code, 
+    address.merger_name address_merger_name, 
+    address.lng address_lng, 
+    address.lat address_lat, 
+    address.pinyin address_pinyin, 
+    address.hot_city address_hot_city, 
+    address.sort_flag address_sort_flag, 
+    address.is_flag address_is_flag
+  </sql>
+  
+  <!-- 根据对象id获取唯一对象 -->
+  <select id="get" resultMap="BaseResultMap" parameterType="com.mcf.base.pojo.Address" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_address where id = #{id,jdbcType=INTEGER} limit 1
+  </select>
+  
+  <select id="getById" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_address where id = #{0} limit 1
+  </select>
+  
+  <!-- 根据中文或拼音获取自动补全城市列表 -->
+  <select id="getAutoCompleData" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List"/>
+    from t_address address where address.is_flag=0 and address.level_type=2 and (address.short_name like CONCAT('%',#{name,jdbcType=VARCHAR},'%') or address.pinyin like CONCAT('%',#{name,jdbcType=VARCHAR},'%')) order by address.pinyin asc limit 0,10
+  </select>
+  
+  <!-- 根据名称查找城市信息 -->
+  <select id="findCityByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+	<include refid="Base_Column_List"/>
+	from t_address address
+	where address.name like CONCAT('%',#{name,jdbcType=VARCHAR},'%') and address.is_flag=0 limit 1
+  </select>
+  
+  <delete id="delete" parameterType="com.mcf.base.pojo.Address" >
+    delete from t_address
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="add" parameterType="com.mcf.base.pojo.Address" >
+    insert into t_address
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="parentId != null" >
+        parent_id,
+      </if>
+      <if test="shortName != null" >
+        short_name,
+      </if>
+      <if test="levelType != null" >
+        level_type,
+      </if>
+      <if test="cityCode != null" >
+        city_code,
+      </if>
+      <if test="zipCode != null" >
+        zip_code,
+      </if>
+      <if test="mergerName != null" >
+        merger_name,
+      </if>
+      <if test="lng != null" >
+        lng,
+      </if>
+      <if test="lat != null" >
+        lat,
+      </if>
+      <if test="pinyin != null" >
+        pinyin,
+      </if>
+      <if test="hotCity != null" >
+        hot_city,
+      </if>
+      <if test="sortFlag != null" >
+        sort_flag,
+      </if>
+      <if test="isFlag != null" >
+        is_flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null" >
+        #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="shortName != null" >
+        #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="levelType != null" >
+        #{levelType,jdbcType=TINYINT},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=INTEGER},
+      </if>
+      <if test="zipCode != null" >
+        #{zipCode,jdbcType=INTEGER},
+      </if>
+      <if test="mergerName != null" >
+        #{mergerName,jdbcType=VARCHAR},
+      </if>
+      <if test="lng != null" >
+        #{lng,jdbcType=DOUBLE},
+      </if>
+      <if test="lat != null" >
+        #{lat,jdbcType=DOUBLE},
+      </if>
+      <if test="pinyin != null" >
+        #{pinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="hotCity != null" >
+        #{hotCity,jdbcType=TINYINT},
+      </if>
+      <if test="sortFlag != null" >
+        #{sortFlag,jdbcType=INTEGER},
+      </if>
+      <if test="isFlag != null" >
+        #{isFlag,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="update" parameterType="com.mcf.base.pojo.Address" >
+    update t_address
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null" >
+        parent_id = #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="shortName != null" >
+        short_name = #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="levelType != null" >
+        level_type = #{levelType,jdbcType=TINYINT},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=INTEGER},
+      </if>
+      <if test="zipCode != null" >
+        zip_code = #{zipCode,jdbcType=INTEGER},
+      </if>
+      <if test="mergerName != null" >
+        merger_name = #{mergerName,jdbcType=VARCHAR},
+      </if>
+      <if test="lng != null" >
+        lng = #{lng,jdbcType=DOUBLE},
+      </if>
+      <if test="lat != null" >
+        lat = #{lat,jdbcType=DOUBLE},
+      </if>
+      <if test="pinyin != null" >
+        pinyin = #{pinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="hotCity != null" >
+        hot_city = #{hotCity,jdbcType=TINYINT},
+      </if>
+      <if test="sortFlag != null" >
+        sort_flag = #{sortFlag,jdbcType=INTEGER},
+      </if>
+      <if test="isFlag != null" >
+        is_flag = #{isFlag,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+</mapper>

@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+        <groupId>com.mcf</groupId>
+        <artifactId>mcf-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+    <groupId>com.mcf.manage</groupId>
+    <artifactId>mcf-manage</artifactId>
+	<version>${mcf-manage.version}</version>
+	<packaging>war</packaging>
+
+	<name>mcf-manage</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<finalName>mcf-manage</finalName>
+		<resources>
+			<resource>
+				<targetPath>${project.build.directory}/classes</targetPath>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.mcf.base</groupId>
+			<artifactId>mcf-base</artifactId>
+			<version>${mcf-base.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.mcf.service</groupId>
+			<artifactId>mcf-service</artifactId>
+			<version>${mcf-service.version}</version>
+		</dependency>
+		
+	</dependencies>
+
+</project>

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: mcf-manage
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: saq691
+Implementation-Vendor-Id: com.mcf.manage
+Build-Jdk: 1.8.0_101
+Created-By: Maven Integration for Eclipse
+

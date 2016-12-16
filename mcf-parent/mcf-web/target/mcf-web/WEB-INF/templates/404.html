@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>404错误：你访问的页面丢失了</title>
+	<link rel="Shortcut Icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
+</head>
+<body>
+<div id="wrap">
+	<!-- header begin -->
+	<div id="header">
+		<div class="bp-header">
+			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派" /></a>
+			<div class="nav right">
+			    <span id="showMenu"></span>
+				<ul id="navMenu">
+				    <li class="current"><a href="index.html">首页</a></li>
+					<li><a href="enterprise.html">帮派APP商户端</a></li>
+					<li><a href="user.html">帮派APP用户端</a></li>
+					<li><a href="fellows.html">合伙人</a></li>
+					<li><a href="news.html">帮派动态</a></li>
+					<li><a href="about.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+		
+	<!-- error begin -->
+	<div id="error">
+	   <div class="error-img"><img alt="404" src="images/404.png" /></div>
+	   <div class="error-describe">
+	       <div class="tip-msg"><p>抱歉！页面无法访问……</p></div>
+	       <div class="reason">
+               <p>可能因为：</p>
+               <ul class="reason-list">
+                   <li>网址有错误<span><i class="gt">&gt;</i>请检查地址是否完整或存在多余字符</span></li>
+                   <li>网址已失效<span><i class="gt">&gt;</i>可能页面已删除，活动已下线等</span></li>
+                   <li><a href="index.html">返回主页</a></li>
+               </ul>
+           </div>
+	   </div>
+	</div>
+	<!-- error end -->
+		
+	<!-- footer begin -->
+	<div th:include="footer"></div>
+	<!-- footer end -->
+	<script type="text/javascript" src="js/require.js" data-main="js/main.js"></script>
+</div>
+</body>
+</html>

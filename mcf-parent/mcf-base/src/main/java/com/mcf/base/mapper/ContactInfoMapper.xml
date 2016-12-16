@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mcf.base.mapper.ContactInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.mcf.base.pojo.ContactInfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="is_delete" property="isDelete" jdbcType="TINYINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="contact_way" property="contactWay" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="is_contact" property="isContact" jdbcType="TINYINT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="visit_time" property="visitTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, is_delete, name, contact_way, content, is_contact, remark, create_time, visit_time
+  </sql>
+  
+  <!--  -->
+  <select id="get" resultMap="BaseResultMap" parameterType="com.mcf.base.pojo.ContactInfo" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_contact_info
+    where id = #{id,jdbcType=VARCHAR} limit 1
+  </select>
+  
+  <!--  -->
+  <select id="getById" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_contact_info
+    where is_delete = 0 and id = #{0} limit 1
+  </select>
+  
+  <!-- 获取所有合伙人信息列表 -->
+  <select id="getContactInfoList" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_contact_info contact_info 
+    <where>
+        is_delete= 0 
+	    <if test="keywords != null">
+	      and contact_info.name like concat('%',#{keywords,jdbcType=VARCHAR},'%') 
+	      or contact_info.contact_way like concat('%',#{keywords,jdbcType=VARCHAR},'%') 
+	    </if>
+    </where>
+    order by create_time desc
+  </select>
+  
+  <delete id="delete" parameterType="com.mcf.base.pojo.ContactInfo" >
+    delete from t_contact_info
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <delete id="batchDelete" parameterType="java.lang.String">
+	delete from t_contact_info where id in 
+	<foreach collection="array" item="id" open="(" separator="," close=")">
+	  #{id}
+	</foreach>
+  </delete>
+  
+  <insert id="add" parameterType="com.mcf.base.pojo.ContactInfo" >
+    insert into t_contact_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="contactWay != null" >
+        contact_way,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="isContact != null" >
+        is_contact,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="visitTime != null" >
+        visit_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="contactWay != null" >
+        #{contactWay,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="isContact != null" >
+        #{isContact,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="visitTime != null" >
+        #{visitTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="update" parameterType="com.mcf.base.pojo.ContactInfo" >
+    update t_contact_info
+    <set >
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="contactWay != null" >
+        contact_way = #{contactWay,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="isContact != null" >
+        is_contact = #{isContact,jdbcType=TINYINT},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="visitTime != null" >
+        visit_time = #{visitTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+    
+</mapper>

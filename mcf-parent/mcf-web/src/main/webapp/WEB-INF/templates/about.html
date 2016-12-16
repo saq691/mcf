@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>帮派，为小而美发声</title>
+	<link rel="Shortcut Icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
+	<link rel="stylesheet" type="text/css" th:href="@{'css/ui-dialog.custom.css?v='+${application.version}}"/>
+</head>
+<body>
+<div id="wrap">
+	<!-- header begin -->
+	<div id="header">
+		<div class="bp-header">
+			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派" /></a>
+			<div class="nav right">
+			    <span id="showMenu"></span>
+				<ul id="navMenu">
+				    <li><a href="index.html">首页</a></li>
+					<li><a href="enterprise.html">帮派APP商户端</a></li>
+					<li><a href="user.html">帮派APP用户端</a></li>
+					<li><a href="fellows.html">合伙人</a></li>
+					<li><a href="news.html">帮派动态</a></li>
+					<li class="current"><a href="about.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+		
+	<!-- main begin -->
+	<div id="main">
+	    <div class="about-wrap">
+		    <div class="describe-title">联系我们</div>
+			<div class="about-describe">
+				<div class="title">想要了解更多的情况，请联系我们</div>
+				<ul>
+					<li>周一到周日，全年无休</li>
+					<li>9:00～18:00</li>
+					<li>等候您的信息</li>
+				</ul>
+				<p>商务合作：黄旭13625279418 15882143433</p>
+				<p>客服电话：15882143433</p>
+				<p>简历投递：huangxu@51bppd.com</p>
+				<p>粉丝交流群：583610508</p>
+			</div>
+		    <div class="about-form">
+			    <div class="input-item">
+				    <input type="text" name="name" class="inp" id="name" placeholder="姓名" value=""  />
+				    <input type="text" name="email" class="inp inp-ml" id="email" placeholder="电子邮箱或者联系方式" value=""  />
+			    </div>
+			    <div class="input-item">
+				    <textarea rows="4" cols="50" class="textarea" id="content" name="content" placeholder="信息内容"></textarea>
+			    </div>
+			    <div class="input-item">
+				    <input type="button" class="inp-btn" id="sendBtn" name="send" value="发送信息"/>
+			    </div>
+			</div>
+		</div>
+		<div class="contact-address">
+			<h2>联系地址</h2>
+			<div class="address">
+	            <h4>成都媒超风信息技术有限公司</h4>
+	            <p>地址：成都市高新区天府五街菁蓉国际广场2栋A区12楼</p>
+	            <p>邮编：610000</p>
+	            <p>电话：15882143433</p>
+            </div>
+		</div>
+		<!-- about-map begin -->
+		<div class="about-map">
+			<div class="address-card">
+	            <h2>成都媒超风信息技术有限公司</h2>
+	            <p>地址: 成都市高新区天府五街</p>
+	            <p>菁蓉国际广场2栋A区12楼</p>
+	            <p>邮编: 610000</p>
+	            <p>客服电话: 15882143433</p>
+	        </div>
+		</div>
+		<!-- about-map end -->
+	</div>
+	<!-- main end -->
+		
+	<!-- footer begin -->
+	<div th:include="footer"></div>
+	<!-- footer end -->
+    <script type="text/javascript" src="js/require.js" data-main="js/about/main.js"></script>
+</div>
+</body>
+</html>

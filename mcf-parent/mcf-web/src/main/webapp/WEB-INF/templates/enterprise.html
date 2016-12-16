@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>帮派，为小而美发声</title>
+	<link rel="Shortcut Icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
+</head>
+<body>
+<div id="wrap">
+	<!-- header begin -->
+	<div id="header">
+		<div class="bp-header">
+			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派" /></a>
+			<div class="nav right">
+			    <span id="showMenu"></span>
+				<ul id="navMenu">
+				    <li><a href="index.html">首页</a></li>
+					<li class="current"><a href="enterprise.html">帮派APP商户端</a></li>
+					<li><a href="user.html">帮派APP用户端</a></li>
+					<li><a href="fellows.html">合伙人</a></li>
+					<li><a href="news.html">帮派动态</a></li>
+					<li><a href="about.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+		
+	<!-- main begin -->
+	<div id="main">
+		<div class="wrapbg">
+		    <div class="app-download">
+				<div class="app-code">
+					<dl><dt><img src="images/encode.jpg" /></dt><dd>帮派商户端APP下载</dd></dl>
+					<div class="app-btn">
+					   <a href="javascript:;" class="icon-iPhone">iPhone下载</a>
+					   <a href="javascript:;" class="icon-Android">Android下载</a>
+					</div>
+				</div>
+				<div class="app-title">人人都是发布者 企业自推广平台</div>
+		    </div>
+		</div>
+		
+		<!-- barRow begin -->
+		<div id="barRow">
+			<div class="wrapper">
+				<div class="row-title">
+					<h3>不同凡响，处处为你着想</h3>
+					<h5>强大的功能，和极致的用户体验,<br />自主投放精准推送</h5>
+				</div>
+				<div class="barRow-main">
+					<ul class="list-w center">
+						<li>
+							<div class="barRow-box">
+								<h2 class="icon"><i class="icon-liberty"></i></h2>
+								<h4 class="title">自主直投</h4>
+								<p class="description">广告投放去中介化、去外包，自主出价，自主选择目标人群、目标区域定向投放</p>
+							</div>
+						</li>
+						<li>
+							<div class="barRow-box">
+								<h2 class="icon"><i class="icon-accurate"></i></h2>
+								<h4 class="title">定向精准</h4>
+								<p class="description">通过LBS和大数据算法，限定人群和区域，快速找到并聚焦目标客户，需求分析，实现传单广告的精准送达</p>
+							</div>
+						</li>
+						<li>
+							<div class="barRow-box">
+								<h2 class="icon"><i class="icon-push"></i></h2>
+								<h4 class="title">多对多爆发式PUSH</h4>
+								<p class="description">利用媒超风专利P2P信息PUSH技术，实现广告信息的爆发式扩散和精准收阅</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- barRow end -->
+	</div>
+	<!-- main end -->
+		
+	<!-- footer begin -->
+	<div th:include="footer"></div>
+	<!-- footer end -->
+	<script type="text/javascript" src="js/require.js" data-main="js/main.js"></script>
+</div>
+</body>
+</html>

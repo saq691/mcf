@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>帮派，为小而美发声</title>
+	<link rel="Shortcut Icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
+</head>
+<body>
+<div id="wrap">
+	<!-- header begin -->
+	<div id="header">
+		<div class="bp-header">
+			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派" /></a>
+			<div class="nav right">
+			    <span id="showMenu"></span>
+				<ul id="navMenu">
+				    <li><a href="index.html">首页</a></li>
+					<li><a href="enterprise.html">帮派APP商户端</a></li>
+					<li><a href="user.html">帮派APP用户端</a></li>
+					<li><a href="fellows.html">合伙人</a></li>
+					<li class="current"><a href="news.html">帮派动态</a></li>
+					<li><a href="about.html">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+		
+	<!-- main begin -->
+	<div id="main">
+		<div class="dynamic-list">
+		    <div class="list-time"><p class="day" th:text="${#dates.format(newsContent.createTime,'dd')}"></p><p class="month" th:text="${#dates.format(newsContent.createTime,'MM月')}"></p></div>
+			<div class="new-content">
+			    <h2 class="content-title" th:text="${newsContent.title}" th:title="${newsContent.title}"></h2>
+		        <div class="article-desc">
+					<span class="author" th:title="${newsContent.author}">&nbsp;&nbsp;作者：<label th:text="${newsContent.author}"></label></span>
+					<span class="source" th:title="${newsContent.source}">&nbsp;&nbsp;来源：<label th:text="${newsContent.source}"></label></span>
+					<span class="datetime" th:text="${#dates.format(newsContent.createTime,'yyyy-MM-dd HH:mm:ss')}"></span>
+			    </div>
+			    <p class="article-outline"><span>摘要</span><label th:text="${newsContent.digest}"></label></p>
+			    <div class="article-content" th:utext="${newsContent.content}"></div>
+		    </div>
+		</div>
+	</div>
+	<!-- main end -->
+		
+	<!-- footer begin -->
+	<div th:include="footer"></div>
+	<!-- footer end -->
+	<script type="text/javascript" src="js/require.js" data-main="js/main.js"></script>
+</div>
+</body>
+</html>
