@@ -11,9 +11,7 @@ import org.springframework.format.Formatter;
  * Title. <br>
  * Description: 自定义Formatter，需要实现Formatter接口/Formatter接口泛型，就是要转换的类型
  * <p>
- * Copyright: Copyright (c) 2016年11月27日 下午4:53:26
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:25:26
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

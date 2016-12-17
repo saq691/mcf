@@ -23,9 +23,7 @@ import com.mcf.service.IAdminUserService;
  * Title. <br>
  * Description: 系统用户中心
  * <p>
- * Copyright: Copyright (c) 2016年11月18日 下午10:41:16
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:44:18
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

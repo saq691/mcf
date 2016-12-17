@@ -15,19 +15,6 @@ import com.mcf.base.exception.BaseException;
 import com.mcf.base.mapper.AddressMapper;
 import com.mcf.base.pojo.Address;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:00:53
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Repository("addressDao")
 public class AddressDaoImpl extends BaseMapperDaoImpl<Address> implements IAddressDao {
 	private Logger logger = LoggerFactory.getLogger(AddressDaoImpl.class);

@@ -16,9 +16,7 @@ import com.mcf.base.common.utils.RandomUtils;
  * Description: 判断请求url和数据是否和上一次相同， 一个用户相同url同时提交，
  * 相同数据验证主要通过session中保存到的url和请求参数；如果和上次相同，则是重复提交表单。
  * <p>
- * Copyright: Copyright (c) 2016年11月25日 下午7:49:57
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:26:07
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

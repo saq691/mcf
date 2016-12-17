@@ -23,19 +23,6 @@ import com.mcf.base.exception.BaseException;
 import com.mcf.base.pojo.Copartner;
 import com.mcf.service.ICopartnerService;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:39:30
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Service("copartnerService")
 public class CopartnerServiceImpl extends BaseServiceImpl<Copartner>
 		implements ICopartnerService {

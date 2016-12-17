@@ -14,9 +14,7 @@ import org.springframework.util.PropertyPlaceholderHelper;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:12:53
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:33:10
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

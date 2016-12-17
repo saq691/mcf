@@ -10,19 +10,6 @@ import com.mcf.base.dao.IContactInfoDao;
 import com.mcf.base.mapper.ContactInfoMapper;
 import com.mcf.base.pojo.ContactInfo;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:31:20
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Repository("contactInfoDao")
 public class ContactInfoDaoImpl extends BaseMapperDaoImpl<ContactInfo>
 		implements IContactInfoDao {

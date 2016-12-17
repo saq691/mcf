@@ -22,13 +22,10 @@ import com.mcf.manage.core.model.LoginModel;
 import com.mcf.manage.web.controller.common.BaseController;
 
 /**
- * 
  * Title. <br>
  * Description: 登录中心
  * <p>
- * Copyright: Copyright (c) 2016年11月16日 下午9:48:09
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:43:14
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

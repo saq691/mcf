@@ -9,9 +9,7 @@ import java.lang.annotation.Target;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月25日 下午8:06:00
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:20:17
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

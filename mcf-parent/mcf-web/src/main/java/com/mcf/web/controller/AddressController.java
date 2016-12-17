@@ -15,9 +15,7 @@ import com.mcf.service.IAddressService;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月18日 下午12:03:40
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:48:23
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

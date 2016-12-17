@@ -4,9 +4,7 @@ package com.mcf.base.pojo;
  * Title. <br>
  * Description: 地址省市区字典POJO类
  * <p>
- * Copyright: Copyright (c) 2016年11月15日 下午9:57:54
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:38:07
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

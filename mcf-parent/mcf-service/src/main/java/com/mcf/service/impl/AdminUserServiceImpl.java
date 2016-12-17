@@ -22,19 +22,6 @@ import com.mcf.base.exception.BaseException;
 import com.mcf.base.pojo.AdminUser;
 import com.mcf.service.IAdminUserService;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:14:01
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Service("adminUserService")
 public class AdminUserServiceImpl extends BaseServiceImpl<AdminUser>
 		implements IAdminUserService {

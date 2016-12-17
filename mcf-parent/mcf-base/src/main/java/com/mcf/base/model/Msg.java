@@ -1,5 +1,16 @@
 package com.mcf.base.model;
 
+/**
+ * Title. <br>
+ * Description.
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:37:49
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
+ */
 public class Msg extends BaseModel {
 	/**
 	 * 

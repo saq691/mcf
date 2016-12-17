@@ -12,12 +12,11 @@ import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
 
 /**
+ * 
  * Title. <br>
  * Description: 七牛云上传图片工具类
  * <p>
- * Copyright: Copyright (c) 2016年11月17日 下午11:28:36
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:30:40
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

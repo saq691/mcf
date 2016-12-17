@@ -3,10 +3,15 @@ package com.mcf.base.common.page;
 import com.mcf.base.model.BaseModel;
 
 /**
- * 分页模型
- *
- * @author sunaiqiang
- * @version 2.0 2016-04-05
+ * Title. <br>
+ * Description: 分页模型
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:27:48
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
  */
 public class Pagination extends BaseModel {
 	/**

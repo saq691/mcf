@@ -21,9 +21,7 @@ import com.mcf.service.ICopartnerService;
  * Title. <br>
  * Description: 申请合伙人中心
  * <p>
- * Copyright: Copyright (c) 2016年11月18日 上午11:41:58
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:48:51
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

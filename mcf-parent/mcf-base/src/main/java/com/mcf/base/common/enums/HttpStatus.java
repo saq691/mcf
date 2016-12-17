@@ -4,9 +4,7 @@ package com.mcf.base.common.enums;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:04:23
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:24:41
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

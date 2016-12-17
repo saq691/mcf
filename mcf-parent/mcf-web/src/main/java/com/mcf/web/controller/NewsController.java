@@ -18,9 +18,7 @@ import com.mcf.service.INewsContentService;
  * Title. <br>
  * Description: 帮派动态中心
  * <p>
- * Copyright: Copyright (c) 2016年11月18日 上午11:41:58
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:49:09
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

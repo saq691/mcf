@@ -9,13 +9,10 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 /**
- * 
  * Title. <br>
  * Description：日期帮助类工具类
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:09:43
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:29:43
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

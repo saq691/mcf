@@ -22,19 +22,6 @@ import com.mcf.base.exception.BaseException;
 import com.mcf.base.pojo.ContactInfo;
 import com.mcf.service.IContactInfoService;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:33:04
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Service("contactInfoService")
 public class ContactInfoServiceImpl extends BaseServiceImpl<ContactInfo>
 		implements IContactInfoService {

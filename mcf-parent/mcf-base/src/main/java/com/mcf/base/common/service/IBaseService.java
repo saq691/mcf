@@ -5,6 +5,17 @@ import java.util.Map;
 
 import com.mcf.base.common.page.Pager;
 
+/**
+ * Title. <br>
+ * Description.
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:28:03
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
+ */
 public interface IBaseService<T> {
 	/**
 	 * 添加实体对象

@@ -10,9 +10,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  * Title. <br>
  * Description: 联系信息POJO类
  * <p>
- * Copyright: Copyright (c) 2016年11月15日 下午9:57:40
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:39:03
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

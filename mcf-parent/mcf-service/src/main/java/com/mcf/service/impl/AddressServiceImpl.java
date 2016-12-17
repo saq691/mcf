@@ -16,19 +16,6 @@ import com.mcf.base.exception.BaseException;
 import com.mcf.base.pojo.Address;
 import com.mcf.service.IAddressService;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:03:03
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Service("addressService")
 public class AddressServiceImpl extends BaseServiceImpl<Address>
 		implements IAddressService {

@@ -8,9 +8,7 @@ import org.springframework.context.ApplicationContextAware;
  * Title. <br>
  * Description：Spring工具类
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:11:34
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:31:46
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

@@ -24,19 +24,6 @@ import com.mcf.base.exception.BaseException;
 import com.mcf.base.pojo.NewsContent;
 import com.mcf.service.INewsContentService;
 
-/**
- * Title. <br>
- * Description.
- * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:43:51
- * <p>
- * Company: 成都媒超风信息技术有限公司
- * <p>
- * Author: 10003/sunaiqiang saq691@126.com
- * <p>
- * Version: 1.0
- * <p>
- */
 @Service("newsContentService")
 public class NewsContentServiceImpl extends BaseServiceImpl<NewsContent>
 		implements INewsContentService {

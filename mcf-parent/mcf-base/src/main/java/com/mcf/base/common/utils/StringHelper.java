@@ -13,9 +13,7 @@ import com.mcf.base.common.constants.Constants;
  * Title. <br>
  * Description：帮助工具类
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:04:40
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:32:35
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

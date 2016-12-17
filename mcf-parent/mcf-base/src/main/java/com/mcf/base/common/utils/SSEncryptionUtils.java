@@ -8,9 +8,7 @@ import com.mcf.base.common.ss.encoding.Md5PasswordEncoder;
  * Title. <br>
  * Description：Spring Security MD5加密
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:11:57
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:32:00
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>
@@ -62,10 +60,6 @@ public class SSEncryptionUtils {
 		Md5PasswordEncoder encoder = new Md5PasswordEncoder();
 		/** 不带盐值的MD5加密 */
 		return encoder.encodePassword(rawStr, null);
-	}
-
-	public static void main(String[] args) {
-		System.out.println(saltMD5Encoder("bppd#2016"));
 	}
 
 }

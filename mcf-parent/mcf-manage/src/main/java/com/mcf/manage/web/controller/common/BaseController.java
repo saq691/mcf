@@ -22,10 +22,15 @@ import com.mcf.base.common.converter.DateEditor;
 import com.mcf.base.common.utils.MessageUtils;
 
 /**
- * 基本控制层
- * 
- * @author sunaiqiang
- * @version 2.0 2016-04-08
+ * Title. <br>
+ * Description: 基本控制层
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:41:43
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
  */
 public class BaseController implements WebBindingInitializer {
 

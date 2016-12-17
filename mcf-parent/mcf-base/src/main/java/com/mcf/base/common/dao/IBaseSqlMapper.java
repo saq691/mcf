@@ -5,10 +5,15 @@ import java.util.List;
 import org.springframework.dao.DataAccessException;
 
 /**
- * 基础Mapper接口
- *
- * @author sunaiqiang
- * @version 2.0 2016-04-05
+ * Title. <br>
+ * Description: 基础Mapper接口
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:21:35
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
  */
 public interface IBaseSqlMapper<T> extends ISqlMapper {
 

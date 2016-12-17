@@ -7,14 +7,11 @@ import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 import com.mcf.base.common.utils.SSEncryptionUtils;
 
 /**
- * 
  * Title. <br>
  * Description：实现自定义的加密算法（Spring Security的MD5加密算法）实现自定义的加密算法（Spring
  * Security的MD5加密算法）
  * <p>
- * Copyright: Copyright (c) 2016年11月14日 上午10:08:32
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:28:53
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

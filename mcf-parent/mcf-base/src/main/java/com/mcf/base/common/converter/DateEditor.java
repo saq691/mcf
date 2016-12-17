@@ -11,9 +11,7 @@ import java.util.List;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月16日 下午9:29:00
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:20:50
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

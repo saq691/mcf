@@ -22,6 +22,17 @@ import com.mcf.base.exception.BaseException;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
 import com.github.miemiedev.mybatis.paginator.domain.Paginator;
 
+/**
+ * Title. <br>
+ * Description.
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:28:13
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
+ */
 public class BaseServiceImpl<T> implements IBaseService<T> {
 
 	private static Logger logger = LoggerFactory.getLogger(BaseServiceImpl.class);

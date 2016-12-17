@@ -20,11 +20,15 @@ import com.mcf.base.common.dao.IBaseSqlMapper;
 import com.mcf.base.exception.BaseException;
 
 /**
- * 基础dao接口实现类
- *
- * @param <T>
- * @author sunaiqiang
- * @version 2.0 2016-04-05
+ * Title. <br>
+ * Description: 基础dao接口实现类
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:23:09
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
  */
 @SuppressWarnings({ "rawtypes", "unchecked" })
 public class BaseMapperDaoImpl<T> extends SqlSessionDaoSupport

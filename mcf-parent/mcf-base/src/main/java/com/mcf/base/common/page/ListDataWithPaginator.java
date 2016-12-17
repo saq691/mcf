@@ -7,11 +7,15 @@ import com.mcf.base.model.BaseModel;
 import com.github.miemiedev.mybatis.paginator.domain.Paginator;
 
 /**
- * 数据模型
- *
- * @param <T>
- * @author sunaiqiang
- * @version 2.0 2016-04-05
+ * Title. <br>
+ * Description: 数据模型
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:27:16
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
  */
 public class ListDataWithPaginator<T> extends BaseModel {
 

@@ -11,9 +11,7 @@ import com.mcf.base.pojo.ContactInfo;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月15日 上午12:32:19
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:46:21
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

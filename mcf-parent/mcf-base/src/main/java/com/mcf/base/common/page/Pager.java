@@ -3,6 +3,17 @@ package com.mcf.base.common.page;
 import com.mcf.base.common.constants.Constants;
 import com.mcf.base.model.BaseModel;
 
+/**
+ * Title. <br>
+ * Description.
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:27:42
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
+ */
 public class Pager extends BaseModel {
 	/**
 	 *

@@ -24,9 +24,7 @@ import com.mcf.service.INewsContentService;
  * Title. <br>
  * Description.
  * <p>
- * Copyright: Copyright (c) 2016年11月17日 下午7:15:35
- * <p>
- * Company: 成都媒超风信息技术有限公司
+ * Copyright: Copyright (c) 2016年12月17日 下午2:43:56
  * <p>
  * Author: 10003/sunaiqiang saq691@126.com
  * <p>

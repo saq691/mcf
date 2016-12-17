@@ -2,6 +2,17 @@ package com.mcf.base.model;
 
 import java.util.List;
 
+/**
+ * Title. <br>
+ * Description.
+ * <p>
+ * Copyright: Copyright (c) 2016年12月17日 下午2:37:57
+ * <p>
+ * Author: 10003/sunaiqiang saq691@126.com
+ * <p>
+ * Version: 1.0
+ * <p>
+ */
 public class ResponseData extends BaseModel {
 	/**
 	 * 
