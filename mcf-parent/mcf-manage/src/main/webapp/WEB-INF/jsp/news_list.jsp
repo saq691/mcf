@@ -1,4 +1,5 @@
 <%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +45,7 @@
 	                            <td><span class="pie">${newsContent.title}</span></td>
 	                            <td align="center">${newsContent.isStick eq 0 ? '正常':'已置顶'}</td>
 	                            <td align="center">${newsContent.isShow eq 0 ? '隐藏':'显示'}</td>
-	                            <td align="center">${newsContent.createTime}</td>
+	                            <td align="center"><fmt:formatDate value="${newsContent.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 	                            <td align="center">
 	                                <c:if test="${newsContent.isStick eq 0}"><a href="javascript:;" class="aother successStick" id="${newsContent.id}">置顶</a></c:if>
 		                            <c:if test="${newsContent.isStick eq 1}"><a href="javascript:;" class="disabled cancelStick" id="${newsContent.id}">取消</a></c:if>

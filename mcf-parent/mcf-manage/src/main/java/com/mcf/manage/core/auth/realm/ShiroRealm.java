@@ -1,6 +1,5 @@
 package com.mcf.manage.core.auth.realm;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -12,8 +11,6 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
@@ -36,7 +33,6 @@ import com.mcf.service.IAdminUserService;
  * <p>
  */
 public class ShiroRealm extends AuthorizingRealm {
-	private static final Logger logger = LoggerFactory.getLogger(ShiroRealm.class);
 	@Autowired
 	private IAdminUserService adminUserService;
 
@@ -62,35 +58,22 @@ public class ShiroRealm extends AuthorizingRealm {
 		if (loginToken.getUsername() != null) {
 			username = loginToken.getUsername().trim();
 		}
-		AdminUser adminUser = null;
-		SimpleAuthenticationInfo info = null;
-		try {
-			// 用户名密码登录
-			adminUser = adminUserService.getByUsername(username);
-			if (adminUser == null) {
-				throw new UnknownAccountException();// 帐号不存在
-			}
-			if (adminUser != null) {
-				// 密码不正确
-				if (!adminUser.getPassword().equals(password)) {
-					throw new IncorrectCredentialsException();
-				}
-				// 账号已禁用
-				if (adminUser.getEnabled().equals(EnabledType.DISABLED.getOrdinal())) {
-					throw new AccountDisableException();
-				}
-				// 账户授权
-				if (StringUtils.isNotBlank(adminUser.getPassword())) {
-					info = new SimpleAuthenticationInfo(adminUser,
-							adminUser.getPassword().toCharArray(), getName());
-				} else {
-					info = new SimpleAuthenticationInfo(adminUser, null, getName());
-				}
-			}
-		} catch (Exception e) {
-			logger.error("login error：{}", e.getMessage());
-			throw new AuthenticationException(e);
+		// 用户名密码登录
+		AdminUser adminUser = adminUserService.getByUsername(username);
+		if (adminUser == null) {
+			throw new UnknownAccountException();// 帐号不存在
 		}
+		// 密码不正确
+		if (!adminUser.getPassword().equals(password)) {
+			throw new IncorrectCredentialsException();
+		}
+		// 账号已禁用
+		if (adminUser.getEnabled().equals(EnabledType.DISABLED.getOrdinal())) {
+			throw new AccountDisableException();
+		}
+		// 账户授权
+		SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(adminUser, adminUser.getPassword().toCharArray(),
+				getName());
 		return info;
 	}
 

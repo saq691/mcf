@@ -71,11 +71,11 @@ public class LoginController extends BaseController {
 			} catch (UnknownAccountException e) {
 				toLoginMessage = "帐号不存在";
 			} catch (IncorrectCredentialsException e) {
-				toLoginMessage = "密码不正确";
+				toLoginMessage = "用户名或密码错误";
 			} catch (AccountDisableException e) {
 				toLoginMessage = "账号已禁用，请联系管理员";
 			} catch (Exception e) {
-				toLoginMessage = "用户名或密码错误";
+				toLoginMessage = "系统发生异常，请联系管理员";
 			}
 		}
 		model.addAttribute("toLoginMessage", toLoginMessage);

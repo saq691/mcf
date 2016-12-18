@@ -1,4 +1,5 @@
 <%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,8 +45,8 @@
 	                            <td>${adminUser.id}</td>
 	                            <td align="center">${adminUser.username}</td>
 	                            <td align="center">${adminUser.convertEnabled}</td>
-	                            <td align="center">${adminUser.createTime}</td>
-	                            <td align="center">${adminUser.updateTime}</td>
+	                            <td align="center"><fmt:formatDate value="${adminUser.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+	                            <td align="center"><fmt:formatDate value="${adminUser.updateTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 	                            <td align="center">
 		                            <c:if test="${adminUser.enabled eq 0}"><a href="javascript:;" class="disabled" id="${adminUser.id}">禁用</a></c:if>
 		                            <c:if test="${adminUser.enabled eq 1}"><a href="javascript:;" class="enabled" id="${adminUser.id}">启用</a></c:if>
