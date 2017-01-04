@@ -2,7 +2,7 @@ package com.mcf.base.common.enums;
 
 /**
  * Title. <br>
- * Description.
+ * Description: 置顶枚举类
  * <p>
  * Copyright: Copyright (c) 2016年12月17日 下午2:25:07
  * <p>

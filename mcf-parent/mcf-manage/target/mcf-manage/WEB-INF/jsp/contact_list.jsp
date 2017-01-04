@@ -1,4 +1,5 @@
 <%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +47,8 @@
 	                            <td>${contactInfo.content}</td>
 	                            <td align="center"><select id="${contactInfo.id}" class="isContact select" name="isContact"><option value="0" <c:if test="${contactInfo.isContact eq 0}">selected="selected"</c:if>>否</option><option value="1" <c:if test="${contactInfo.isContact eq 1}">selected="selected"</c:if>>已联系</option></select></td>
 	                            <td>${contactInfo.remark}</td>
-	                            <td align="center">${contactInfo.createTime}</td>
-	                            <td align="center">${contactInfo.visitTime}</td>
+	                            <td align="center"><fmt:formatDate value="${contactInfo.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+	                            <td align="center"><fmt:formatDate value="${contactInfo.visitTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 	                            <td align="center">
 	                                <input type="hidden" value="${contactInfo.id}" />
 	                                <a href="javascript:;" class="aother addRemark" title="${contactInfo.remark}" id="remark-${contactInfo.id}">${empty contactInfo.remark ? '添加备注':'修改备注'}</a>

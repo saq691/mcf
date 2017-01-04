@@ -1,4 +1,5 @@
 <%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,8 +49,8 @@
 	                            <td align="center"><select id="${copartner.id}" class="isContact select" name="isContact"><option value="0" <c:if test="${copartner.isContact eq 0}">selected="selected"</c:if>>否</option><option value="1" <c:if test="${copartner.isContact eq 1}">selected="selected"</c:if>>已联系</option></select></td>
 	                            <td align="center">${copartner.cooperateType eq 0 ? '企业':'个体'}</td>
 	                            <td>${copartner.remark}</td>
-	                            <td align="center">${copartner.createTime}</td>
-	                            <td align="center">${copartner.createTime}</td>
+	                            <td align="center"><fmt:formatDate value="${copartner.createTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+	                            <td align="center"><fmt:formatDate value="${copartner.updateTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 	                            <td align="center">
 	                                <input type="hidden" value="${copartner.id}" />
 	                                <a href="javascript:;" class="aother addRemark" title="${copartner.remark}" id="remark-${copartner.id}">${empty copartner.remark ? '添加备注':'修改备注'}</a>

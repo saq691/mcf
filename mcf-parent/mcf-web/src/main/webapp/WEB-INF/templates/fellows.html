@@ -48,34 +48,59 @@
 				<p class="p-mt"><strong>帮派APP</strong>&nbsp;---&nbsp;移动端推广神器，移动互联网时代的推广新选择。</p>
 		    </div>
 		    <!--  -->
-			<div class="fr" id="applydiv">
+			<div class="fr applydiv" id="applydiv">
 				<div class="div-title">帮派提供专业企业新媒体推广服务以及开放渠道合作通道。欢迎留下您的需求以及联系方式，我们会有专人与您联系。</div>
 				<div class="m-login">
 					<ul class="login-form clearfix">
-						<li class="div-select">
+						<li>
 						    <span class="s-2">合作类型: </span>
-							<input type="text" name="cooperateType" id="cooperateType" placeholder="请选择合作类型" value="" readonly="readonly" />
-							<div class="select-con">
-				                <h3 class="clearfix select-tit">合作类型<span class="select-close"></span></h3>
-				                <a href="javascript:;" id="0" title="企业">企业</a><a href="javascript:;" id="1" title="个体">个体</a>
-					        </div>
+						    <div class="input-2 div-select">
+								<input type="text" name="cooperateType" id="cooperateType" placeholder="请选择合作类型" value="" readonly="readonly" />
+								<div class="select-con">
+					                <h3 class="clearfix select-tit">合作类型<span class="select-close"></span></h3>
+					                <a href="javascript:;" id="0" title="企业">企业</a><a href="javascript:;" id="1" title="个体">个体</a>
+						        </div>
+						    </div>
 						</li>
-						<li><span class="s-2">城市: </span><input type="hidden" name="cityId" id="cityId" value="" /><input type="text" name="cityName" id="cityName" placeholder="请输入城市" value="" /></li>
-						<li><span class="s-2">姓名: </span><input type="text" name="name" id="name" placeholder="请输入姓名" value=""/></li>
-						<li><span class="s-2">联系方式: </span><input type="text" name="contactWay" id="contactWay" placeholder="请输入联系方式" value=""/></li>
-					    <li class="company div-select">
+						<li>
+							<span class="s-2">城市: </span>
+							<div class="input-2">
+								<input type="hidden" name="cityId" id="cityId" value="" />
+							    <input type="text" name="cityName" id="cityName" placeholder="请输入城市" value="" />
+							</div>
+						</li>
+						<li>
+							<span class="s-2">姓名: </span>
+							<div class="input-2">
+								<input type="text" name="name" id="name" placeholder="请输入姓名" value=""/>
+						    </div>
+						</li>
+						<li>
+							<span class="s-2">联系方式: </span>
+							<div class="input-2">
+								<input type="text" name="contactWay" id="contactWay" placeholder="请输入联系方式" value=""/>
+						    </div>
+						</li>
+					    <li class="company">
 						    <span class="s-2">公司规模: </span>
-							<input type="text" name="companyScale" id="companyScale" placeholder="请选择公司规模" value="" readonly="readonly" />
-							<div class="select-con con-width0">
-				                <h3 class="clearfix select-tit">公司规模<span class="select-close"></span></h3>
-				                <a href="javascript:;" id="0" title="1-49人">1-49人</a>
-				                <a href="javascript:;" id="1" title="50-99人">50-99人</a>
-				                <a href="javascript:;" id="2" title="100-499人">100-499人</a>
-				                <a href="javascript:;" id="3" title="500-999人">500-999人</a>
-				                <a href="javascript:;" id="4" title="1000人以上">1000人以上</a>
-					        </div>
+						    <div class="input-2 div-select">
+								<input type="text" name="companyScale" id="companyScale" placeholder="请选择公司规模" value="" readonly="readonly" />
+								<div class="select-con con-width0">
+					                <h3 class="clearfix select-tit">公司规模<span class="select-close"></span></h3>
+					                <a href="javascript:;" id="0" title="1-49人">1-49人</a>
+					                <a href="javascript:;" id="1" title="50-99人">50-99人</a>
+					                <a href="javascript:;" id="2" title="100-499人">100-499人</a>
+					                <a href="javascript:;" id="3" title="500-999人">500-999人</a>
+					                <a href="javascript:;" id="4" title="1000人以上">1000人以上</a>
+						        </div>
+						    </div>
 						</li>
-						<li class="company"><span class="s-2">主营业务: </span><textarea name="mainBusiness" id="mainBusiness" placeholder="请输入主营业务" class="textarea bus-textarea"></textarea></li>
+						<li class="company">
+							<span class="s-2">主营业务: </span>
+							<div class="input-2">
+								<textarea name="mainBusiness" id="mainBusiness" placeholder="请输入主营业务" class="textarea bus-textarea"></textarea>
+							</div>
+						</li>
 					</ul>
 					<input id="partnerBtn" type="button" value="提交" class="btn btn-primary" />
 				</div>
