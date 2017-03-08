@@ -9,36 +9,23 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta name="format-detection" content="telephone=yes"/>
 	<meta name="msapplication-tap-highlight" content="no" />
-	<title>帮派，为小而美发声</title>
+	<meta name="description" content="成都媒超风信息技术有限公司，简称媒超风新媒。于2015年5月成立，公司创业团队汇聚了原传媒集团、4A公司、阿里巴巴、华为、百度、等公司的一群业界精英人才，通过利用大数据、lbs技术、3ppush技术为广告主们提供自媒体传播的全套解决方案!" />
+	<meta name="Keywords" content="媒超风,派手,自媒体,推广,广告,广告赚钱" />
+	<title>媒超风首页-派手，为小而美发声</title>
 	<link rel="Shortcut Icon" href="images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
 </head>
 <body>
 <div id="wrap">
 	<!-- header begin -->
-	<div id="header">
-		<div class="bp-header">
-			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派"/></a>
-			<div class="nav right">
-			    <span id="showMenu"></span>
-				<ul id="navMenu">
-				    <li class="current"><a href="index.html">首页</a></li>
-					<li><a href="enterprise.html">帮派APP商户端</a></li>
-					<li><a href="user.html">帮派APP用户端</a></li>
-					<li><a href="fellows.html">合伙人</a></li>
-					<li><a href="news.html">帮派动态</a></li>
-					<li><a href="about.html">联系我们</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<div id="header" th:include="common/header(selected=index)"></div>
 	<!-- header end -->
 		
 	<!-- main begin -->
 	<div id="main">
 		<div class="wrapbg index">
 		    <div class="index-title">
-			    <p>帮派</p>
+			    <p>派手</p>
 			    <p>创新媒体，帮小而美超越，矗立风口</p>
 		    </div>
 		</div>
@@ -46,9 +33,9 @@
 		<!-- index-describe begin -->
 		<div class="index-describe">
 		    <p class="title">产品介绍</p>
-		    <p>帮派APP&nbsp;---&nbsp;国内首个移动端众包模式的企业自推广神器。它创造了企业移动营销推广新的模式。 </p>
-		    <p>本地商户使用过的推广手段形形色色，但其效果可能差强人意。举几个栗子：人肉发传单！… 80%的传单发出后就被随手扔掉；间歇低价团购！… 短期客流或许是上来了，但顾客每团一次，利润就流失一分，成本伤不起；发放实体会员卡！… 效果难以追踪，发出去的卡就如同泼出去的水。朋友圈发广告，瞬间被拉黑、被踢出，总是一个人在自嗨，发出去的广告就像泼出去的水。 为了解决这个难题帮派诞生了。针对小企业营销困境和市场痛点，以及各种环境因素，帮派为他们提供了一个更好的推广渠道，那就是众推直投。对于商家，可以在帮派商户端自主直投DM广告单；对于客户，可以在帮派派手端众包派发DM广告单，从而赚取佣金。</p>
-		    <p>帮派&nbsp;---&nbsp;移动端推广神器，移动互联网时代的推广新选择。</p>
+		    <p>派手APP&nbsp;---&nbsp;国内首个移动端众包模式的企业自推广神器。它创造了企业移动营销推广新的模式。 </p>
+		    <p>本地商户使用过的推广手段形形色色，但其效果可能差强人意。举几个栗子：人肉发传单！… 80%的传单发出后就被随手扔掉；间歇低价团购！… 短期客流或许是上来了，但顾客每团一次，利润就流失一分，成本伤不起；发放实体会员卡！… 效果难以追踪，发出去的卡就如同泼出去的水。朋友圈发广告，瞬间被拉黑、被踢出，总是一个人在自嗨，发出去的广告就像泼出去的水。 为了解决这个难题派手诞生了。针对小企业营销困境和市场痛点，以及各种环境因素，派手为他们提供了一个更好的推广渠道，那就是众推直投。对于商家，可以在派手商户端自主直投DM广告单；对于客户，可以在派手派手端众包派发DM广告单，从而赚取佣金。</p>
+		    <p>派手&nbsp;---&nbsp;移动端推广神器，移动互联网时代的推广新选择。</p>
 		    <ul><li class="product0 mr">&nbsp;</li><li class="product1 mr">&nbsp;</li><li class="product2 mr">&nbsp;</li><li class="product3 mr">&nbsp;</li><li class="product4">&nbsp;</li></ul>
 		</div>
 		<!-- index-describe end -->
@@ -58,9 +45,9 @@
 		    <div class="company-content">
 			    <div class="title">公司介绍</div>
 			    <div class="companylogo">&nbsp;</div>
-			    <p>媒超风是一个新媒体公司，专注于移动数字化营销与品牌互动传播和基于大数据算法的移动广告匹配，是一家拥有10年专业网络营销经验和技术开发团队的网络运营商。目前公司已与腾讯、新浪等上千家网络媒体结成战略合作伙伴关系。</p>
-			    <p>帮派是媒超风推出的国内首个众包广告平台。其首创P2P传播技术和大数据分析技术应用于传播领域。帮派app，一个基于大数据和自媒体的电子传单派发软件和众包传播平台，是一个移动端H5广告扩散神器。帮派是一个商家用户制作派发广告，普通自媒体用户查看广告、传播广告赚钱的平台。通过帮派商户端，商家用户自己的地盘自己做主，广告直投模式，自主定价，自主定量，自主选择投放区域、人群，真正做到了位置定向、人群定向、需求定向。真正解决了广告投放费用高投不起、没渠道、没权利，以及有曝光没流量、有流量没销量等问题。 </p>
-			    <p>FOREVER，媒超风将以让天下没有难做的推广为使命，为小而美发声到底，打造用户爱看的像春风一样的媒体。</p>
+			    <p>成都媒超风信息技术有限公司，简称媒超风新媒。于2015年5月成立，公司创业团队汇聚了原传媒集团、4A公司、阿里巴巴、华为、百度、等公司的一群业界精英人才，通过利用大数据、lbs技术、3ppush技术为广告主们提供自媒体传播的全套解决方案。
+				       媒超风总部位于四川成都金牛万达广场SOHO，分支机构覆盖北京、上海、广州、成都、武汉、重庆、山东、深圳、苏州等地。公司主要有媒超风新媒体平台和派手众推平台两大系列产品。截至2016年12月，派手app已服务超过1000+客户，其中200多个品牌主和700多个中小客户，是广大客户值得信赖和依靠的自媒体投放平台。服务行业覆盖汽车、商业、电商、旅游、教育、快消、医疗、金融、地产等国内外众多一线知名品牌。
+				</p>
 		    </div>
 		</div>
 		<!-- company-describe end -->
@@ -69,7 +56,7 @@
 	<!-- main end -->
 		
 	<!-- footer begin -->
-	<div th:include="footer"></div>
+	<div th:include="common/footer"></div>
 	<!-- footer end -->
 	<script type="text/javascript" src="js/require.js" data-main="js/main.js"></script>
 </div>

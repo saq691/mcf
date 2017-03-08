@@ -5,29 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="renderer" content="webkit" />
 	<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-	<title>帮派，为小而美发声</title>
+	<meta name="description" content="成都媒超风信息技术有限公司，简称媒超风新媒。于2015年5月成立，公司创业团队汇聚了原传媒集团、4A公司、阿里巴巴、华为、百度、等公司的一群业界精英人才，通过利用大数据、lbs技术、3ppush技术为广告主们提供自媒体传播的全套解决方案!" />
+	<meta name="Keywords" content="媒超风,派手,自媒体,推广,广告,广告赚钱" />
+	<title>派手，为小而美发声-商户端 (51bppd.COM)</title>
 	<link rel="Shortcut Icon" href="images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
 </head>
 <body>
 <div id="wrap">
 	<!-- header begin -->
-	<div id="header">
-		<div class="bp-header">
-			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派" /></a>
-			<div class="nav right">
-			    <span id="showMenu"></span>
-				<ul id="navMenu">
-				    <li><a href="index.html">首页</a></li>
-					<li class="current"><a href="enterprise.html">帮派APP商户端</a></li>
-					<li><a href="user.html">帮派APP用户端</a></li>
-					<li><a href="fellows.html">合伙人</a></li>
-					<li><a href="news.html">帮派动态</a></li>
-					<li><a href="about.html">联系我们</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<div id="header" th:include="common/header(selected=enterprise)"></div>
 	<!-- header end -->
 		
 	<!-- main begin -->
@@ -35,7 +22,7 @@
 		<div class="wrapbg">
 		    <div class="app-download">
 				<div class="app-code">
-					<dl><dt><img src="images/encode.jpg" /></dt><dd>帮派商户端APP下载</dd></dl>
+					<dl><dt><img src="images/encode.jpg" /></dt><dd>派手商户端APP下载</dd></dl>
 					<div class="app-btn">
 					   <a href="javascript:;" class="icon-iPhone">iPhone下载</a>
 					   <a href="javascript:;" class="icon-Android">Android下载</a>
@@ -84,7 +71,7 @@
 	<!-- main end -->
 		
 	<!-- footer begin -->
-	<div th:include="footer"></div>
+	<div th:include="common/footer"></div>
 	<!-- footer end -->
 	<script type="text/javascript" src="js/require.js" data-main="js/main.js"></script>
 </div>

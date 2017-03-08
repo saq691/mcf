@@ -50,7 +50,7 @@
 	                            <td align="center">${copartner.cooperateType eq 0 ? '企业':'个体'}</td>
 	                            <td>${copartner.remark}</td>
 	                            <td align="center"><fmt:formatDate value="${copartner.createTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
-	                            <td align="center"><fmt:formatDate value="${copartner.updateTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+	                            <td align="center"><fmt:formatDate value="${copartner.visitTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 	                            <td align="center">
 	                                <input type="hidden" value="${copartner.id}" />
 	                                <a href="javascript:;" class="aother addRemark" title="${copartner.remark}" id="remark-${copartner.id}">${empty copartner.remark ? '添加备注':'修改备注'}</a>

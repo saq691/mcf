@@ -17,8 +17,8 @@ var validateMsg={
 	CHECK_NAME:'请输入姓名'
 }
 define(['jquery','dialog'],function($,diglog){
-	$('#showMenu').click(function(){
-		$('#navMenu').toggle();
+	$('#js-i-more').click(function(){
+		$('#js-phonemore-list').toggle();
 	});
 	// 发送联系信息
 	$('#sendBtn').click(function(){

@@ -126,3 +126,8 @@
 .ui-photo .ui-dialog-body{text-align:center;padding:0;}
 /* 图片容器 */
 .ui-img .ui-dialog-content{text-align:center;}
+/*自定义预约*/
+.ui-msg{width:80%;margin:0 auto;}
+.ui-msg .msg-success{width:100%;padding:0;}
+.ui-msg .ui-dialog-body{padding:0;}
+.ui-msg .ui-dialog-content{padding:20px;border:1px solid #ddd;}

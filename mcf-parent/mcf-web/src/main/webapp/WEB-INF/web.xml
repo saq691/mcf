@@ -19,7 +19,7 @@
 	
    <!-- 加载自定义监听器 -->
 	<listener>
-		<listener-class>com.mcf.web.listener.SystemInitListener</listener-class>
+		<listener-class>com.mcf.pc.web.listener.SystemInitListener</listener-class>
 	</listener>
 	
 	<!-- 内存泄漏监听器 -->

@@ -17,8 +17,8 @@ var validateMsg={
 	CHECK_NAME:'请输入姓名'
 }
 require(['jquery','dialog','lib/jquery-ui'],function($,diglog){
-	$('#showMenu').click(function(){
-		$('#navMenu').toggle();
+	$('#js-i-more').click(function(){
+		$('#js-phonemore-list').toggle();
 	});
 	$('.div-select').on({
 		mouseover:function(){$(this).find('div').addClass('select-label-show');},

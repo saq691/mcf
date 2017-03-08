@@ -1,5 +1,11 @@
-body{position:relative;background:#fff;font-family:'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;font-weight:400;line-height:1.6;color:#333;font-size:14px;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,main,nav,section,summary{display:block;}
+body {
+	position:relative;
+	background:#fff;
+	font:14px/1.5 "Helvetica Neue", "Helvetica","Arial","Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif!important;
+	color:#333;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, main, nav, section, summary {display:block;}
 *{margin:0;padding:0;}
 h4{line-height:30px;font-size:25px;}
 h1,h2,h3,h4,h5,h6{font-weight:400;line-height:26px;margin:0;}
@@ -25,17 +31,19 @@ ul{list-style:none;margin:0;padding:0;}
 .fl{float:left;}
 .fr{float:right;}
 /*header*/
-#header{background:#fff;box-shadow:0 0 5px 0 rgba(0,0,0,0.2);border-bottom:1px solid #ddd;height:44px;left:0;position:fixed;top:0;width:100%;z-index:6;}
-.bp-header{max-width:960px;font-size:14px;-webkit-transition:none;transition:none;font-family:'Microsoft YaHei',sans-serif,微软雅黑;width:100%;height:44px;z-index:999;background:#fff;margin:0 auto;}
-.bp-header .logo{display:inline-block;width:112px;height:36px;position:relative;top:9px;left:20px;}
+#header{background:#fff;box-shadow:0 0 5px 0 rgba(0,0,0,0.2);border-bottom:1px solid #ddd;height:56px;left:0;position:fixed;top:0;width:100%;z-index:6;}
+.bp-header{max-width:960px;-webkit-transition:none;transition:none;width:100%;height:56px;z-index:999;background:#fff;margin:0 auto;}
+.bp-header .logo{display:inline-block;width:112px;height:43px;position:relative;top:7px;left:0;}
 /*nav*/
-.nav{position:relative;float:right;font-size:14px;margin:6px 0 0 0;}
-.nav ul{margin:0;padding:0;}
-.nav li{list-style:none;display:inline-block;margin:0 15px 0 0;padding:0;}
-.nav a{display:inline-block;text-decoration:none;color:#666;padding:4px 8px;}
-.nav.right ul{text-align:right;}
-.nav.center ul{text-align:center;}
-.nav a:hover,.nav .current a{color:#03A9F4;}
+.public-header-list{display:block;float:right;}
+.public-header-list li{float:left;}
+.public-header-list-a{display:block;height:38px;padding:17px 20px 0px;font-size:16px;font-weight:100;}
+.public-header-list-a:hover,.header-phonemore-list a:hover,.public-header-list .current a,.header-phonemore-list .current a{color:#03A9F4;}
+.header-phonemore{display:none;}
+.i-more:before{padding-right:6px;content:"\e900";font-size:32px;top:11px;position:absolute;right:0;cursor:pointer;}
+.header-phonemore-list{display:none;position:relative;z-index:1000;background-color:#FFF;box-shadow:1px 1px 1px rgba(0,0,0,.2), -1px -1px 1px rgba(0,0,0,.2);float:right;top:12px;clear:both;width:100%;-webkit-transition:1s;transition:1s;}
+.header-phonemore-list li{border-bottom:1px solid #eee;text-align:center;}
+.header-phonemore-list li a{color:#000;line-height:60px;display:inline-block;width:100%;font-size:16px;font-weight:100;}
 /*main*/
 .wrapbg{position:relative;background:#fcfcfc url(../images/sf-banner.jpg) no-repeat center center;background-size:cover;height:552px;width:100%;}
 .index{background:#fcfcfc url(../images/index.jpg) no-repeat center center;}
@@ -44,7 +52,7 @@ ul{list-style:none;margin:0;padding:0;}
 .index-describe,.company-content,.team-describe,.bp-describe{max-width:960px;width:100%;padding-bottom:50px;margin:0 auto;}
 .index-describe{margin:0 auto;}
 .company-describe{width:100%;background-color:#F9F9F8;}
-.fellows-title,.describe-title{text-align:center;width:200px;color:#60b0e6;font-family:MicrosoftYaHei;font-size:22px;border-bottom:1px solid #ddd;margin:0 auto 40px;padding:40px 0 10px;}
+.fellows-title,.describe-title{text-align:center;width:200px;color:#009cee;font-weight:100;font-size:22px;border-bottom:1px solid #ddd;margin:0 auto 40px;padding:40px 0 10px;}
 .fellows{width:50%;margin-right:50px;}
 .applydiv{width:44%;}
 .desc-padding{padding:30px 0;}
@@ -54,14 +62,14 @@ ul{list-style:none;margin:0;padding:0;}
 .app-code dd{padding-top:3px;font-size:12px;}
 .app-code dt{width:140px;height:140px;}
 .app-code dt img{width:100%;height:100%;}
-.app-title{font-size:42px;font-family:MicrosoftYaHei;clear:both;}
+.app-title{font-size:42px;font-weight:100;font-family:MicrosoftYaHei;clear:both;}
 .app-btn{position:relative;float:left;padding-top:24px;}
 .app-btn a{display:block;border:2px solid #fff;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;margin:15px 0;padding:3px 6px;}
 .icon-iPhone:before,.icon-Android:before{vertical-align:middle;font-size:32px;}
 .icon-iPhone:before{content:"\e901";}
 .icon-Android:before{content:"\e902";}
 .index-title{max-width:780px;padding-top:163px;margin:0 auto;}
-.index-title p{font-family:MicrosoftYaHei;font-size:48px;color:#182F50;text-align:center;margin-bottom:50px;}
+.index-title p{font-family:MicrosoftYaHei;font-weight:100;font-size:48px;color:#182F50;text-align:center;margin-bottom:50px;}
 .index-describe p,.company-describe p,.team-describe p{font-size:14px;line-height:36px;color:#333;}
 .company-describe p{padding-left:257px;}
 .index-describe .title,.company-describe .title,.team-describe .title{font-size:30px;padding:20px 0;}
@@ -139,7 +147,7 @@ ul{list-style:none;margin:0;padding:0;}
 .textarea{width:442px;height:160px;padding:5px 0 0 5px;}
 .inp-ml{margin-left:20px;}
 .inp-btn{background:#f5f5f5;width:80px;height:30px;color:#666;cursor:pointer;border:1px solid #ddd;}
-.about-map{position:relative;width:960px;height:420px;background:url(../images/aboutmap.jpg) no-repeat 0 -40px;margin-left:auto;margin-right:auto;margin-bottom:40px;border:1px solid #ddd;}
+.about-map{position:relative;width:960px;height:420px;background:url(../images/aboutmap.png) no-repeat;margin-left:auto;margin-right:auto;margin-bottom:40px;border:1px solid #ddd;}
 .address-card{line-height:18px;font-size:14px;margin-left:34px;background-color:#1273ea;opacity:0.9;color:#fff;width:262px;position:absolute;padding:20px;}
 .address-card h2{color:#fff;font-size:20px;}
 .contact-address{width:100%;display:inline-block;padding:80px 0;}
@@ -216,7 +224,7 @@ div.tangram-suggestion table tr td{padding-left:8px;}
 .contact{position:relative;}
 .contact a{display:inline-block;height:30px;padding-right:5px;}
 .icon-contact{margin-right:2px;top:-2px;}
-.icon-contact:before{content:"\e909";font-size:18px;color:#666;}
+.icon-contact:before{content:"\e90d";font-size:18px;color:#666;}
 .fcode dl{position:relative;float:left;width:134px;height:140px;border-left:1px solid #dfdfdf;padding:0 0 0 25px;}
 .fcode dt{width:110px;height:110px;}
 .fcode dt img{width:100%;height:100%;}
@@ -239,20 +247,14 @@ div.tangram-suggestion table tr td{padding-left:8px;}
 	.contact-address{display:none;}
 }
 @media screen and (min-width:768px){
-	#navMenu,.about-map{display:block;}
+	.public-header-list,.about-map{display:block;}
+	.header-phonemore{display:none;}
 	.contact-address{display:none;}
 }
-@media screen and (max-width:768px){
-	/*nav*/
-	#navMenu{display:none;}
-	.nav{position:relative;margin-top:6px;min-height:40px;}
-	.nav ul{background:#fff;width:116px;border:solid 1px #ddd;border-right:0;margin-top:5px;}
-	.nav li{display:block;margin:0;}
-	.nav a{display:block;line-height:20px;text-align:center;}
-	.nav .current{display:block;}
-	.nav .current a{background:#60b0e6;color:#fff;border:0;}
-	.nav span{width:100%;display:inline-block;margin-top:1px;text-align:right;cursor:pointer;font-family:"51bppdfont" !important;speak:none;font-style:normal;font-size:32px;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-	.nav span:before{padding-right:6px;content:"\e900";}
+@media(max-width:768px){
+	.bp-header .logo{left:20px;}
+	.public-header-list{display:none;}
+	.header-phonemore{display:inline-block;float:right;}
 	/*main*/
 	.index-describe .title,.company-describe .title,.team-describe .title{font-size:30px;padding:20px;}
 	.index-describe p,.company-describe p,.team-describe p,.fleft p,.p-width,.new-content,.list-content,.companylogo,.contact,.input-item{padding:0 20px;}

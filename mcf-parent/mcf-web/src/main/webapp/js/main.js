@@ -5,7 +5,7 @@ require.config({
 	}
 });
 define(['jquery'],function($){
-	$('#showMenu').click(function(){
-		$('#navMenu').toggle();
+	$('#js-i-more').click(function(){
+		$('#js-phonemore-list').toggle();
 	});
 });

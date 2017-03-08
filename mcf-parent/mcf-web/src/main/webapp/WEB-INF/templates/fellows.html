@@ -5,7 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="renderer" content="webkit" />
 	<meta name="viewport" content="width=320,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-	<title>帮派，为小而美发声</title>
+	<meta name="description" content="成都媒超风信息技术有限公司，简称媒超风新媒。于2015年5月成立，公司创业团队汇聚了原传媒集团、4A公司、阿里巴巴、华为、百度、等公司的一群业界精英人才，通过利用大数据、lbs技术、3ppush技术为广告主们提供自媒体传播的全套解决方案!" />
+	<meta name="Keywords" content="媒超风,派手,自媒体,推广,广告,广告赚钱" />
+	<title>派手，为小而美发声-合伙人(51bppd.COM)</title>
 	<link rel="Shortcut Icon" href="images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" th:href="@{'css/layout.css?v='+${application.version}}" />
 	<link rel="stylesheet" type="text/css" th:href="@{'css/ui-dialog.custom.css?v='+${application.version}}"/>
@@ -13,22 +15,7 @@
 <body>
 <div id="wrap">
 	<!-- header begin -->
-	<div id="header">
-		<div class="bp-header">
-			<a class="logo" href="index.html"><img src="images/logo.png" alt="帮派" /></a>
-			<div class="nav right">
-			    <span id="showMenu"></span>
-				<ul id="navMenu">
-				    <li><a href="index.html">首页</a></li>
-					<li><a href="enterprise.html">帮派APP商户端</a></li>
-					<li><a href="user.html">帮派APP用户端</a></li>
-					<li class="current"><a href="fellows.html">合伙人</a></li>
-					<li><a href="news.html">帮派动态</a></li>
-					<li><a href="about.html">联系我们</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<div id="header" th:include="common/header(selected=fellows)"></div>
 	<!-- header end -->
 		
 	<!-- main begin -->
@@ -42,14 +29,14 @@
 		<!-- bp-describe begin -->
 		<div class="bp-describe desc-padding">
 			<div class="fl fellows">
-				<p class="p-mb"><strong>帮派APP</strong>&nbsp;---&nbsp;国内首个移动端众包模式的企业自推广神器。它创造了企业移动营销推广新的模式。</p>
+				<p class="p-mb"><strong>派手APP</strong>&nbsp;---&nbsp;国内首个移动端众包模式的企业自推广神器。它创造了企业移动营销推广新的模式。</p>
 				<p>本地商户使用过的推广手段形形色色，但其效果可能差强人意。举几个栗子：人肉发传单！… 80%的传单发出后就被随手扔掉；间歇低价团购！… 短期客流或许是上来了，但顾客每团一次，利润就流失一分，成本伤不起；发放实体会员卡！… 效果难以追踪，发出去的卡就如同泼出去的水。朋友圈发广告，瞬间被拉黑、被踢出，总是一个人在自嗨，发出去的广告就像泼出去的水。
-	                               为了解决这个难题帮派诞生了。针对小企业营销困境和市场痛点，以及各种环境因素，帮派为他们提供了一个更好的推广渠道，那就是众推直投。对于商家，可以在帮派商户端自主直投DM广告单；对于客户，可以在帮派派手端众包派发DM广告单，从而赚取佣金。</p>
-				<p class="p-mt"><strong>帮派APP</strong>&nbsp;---&nbsp;移动端推广神器，移动互联网时代的推广新选择。</p>
+	                               为了解决这个难题派手诞生了。针对小企业营销困境和市场痛点，以及各种环境因素，派手为他们提供了一个更好的推广渠道，那就是众推直投。对于商家，可以在派手商户端自主直投DM广告单；对于客户，可以在派手派手端众包派发DM广告单，从而赚取佣金。</p>
+				<p class="p-mt"><strong>派手APP</strong>&nbsp;---&nbsp;移动端推广神器，移动互联网时代的推广新选择。</p>
 		    </div>
 		    <!--  -->
 			<div class="fr applydiv" id="applydiv">
-				<div class="div-title">帮派提供专业企业新媒体推广服务以及开放渠道合作通道。欢迎留下您的需求以及联系方式，我们会有专人与您联系。</div>
+				<div class="div-title">派手提供专业企业新媒体推广服务以及开放渠道合作通道。欢迎留下您的需求以及联系方式，我们会有专人与您联系。</div>
 				<div class="m-login">
 					<ul class="login-form clearfix">
 						<li>
@@ -112,7 +99,7 @@
 	<!-- main end -->
 		
 	<!-- footer begin -->
-	<div th:include="footer"></div>
+	<div th:include="common/footer"></div>
 	<!-- footer end -->
 	<script type="text/javascript" src="js/require.js" data-main="js/fellows/main.js"></script>
 </div>
